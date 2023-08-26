@@ -1,0 +1,19 @@
+<ng-container *ngFor="let item of data; let i = index">
+  <div [ngClass]="i !== 0 ? 'pt-2' : ''">
+    <div class="d-flex item align-items-center">
+      <div class="col-3"><div class="image"></div></div>
+      <div class="col-9 ps-2">
+        <div>
+          <span class="title">{{ item.username }}</span
+          ><span class="description ps-2">{{ getStatus(item.status) }}</span>
+        </div>
+        <div class="description">{{ item.description }}</div>
+        <div class="description">
+          <span class="pe-2"
+            ><fa-icon [icon]="getTagActivity(item.status)"></fa-icon></span
+          ><span>{{ item.time }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

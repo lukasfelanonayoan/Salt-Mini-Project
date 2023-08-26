@@ -1,0 +1,52 @@
+.list-highlight {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 15px;
+
+  height: 520px;
+}
+.item {
+  background-color: rgb(253, 231, 231);
+  color: #953e46;
+  transition: 0.3s all;
+  & .title {
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+  & .description {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  & .icon {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.item:first-child {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.item:not(:last-child):hover {
+  cursor: pointer;
+  background-color: lightblue;
+  color: red;
+}
+
+.item:last-child {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
+.item:last-child:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}

@@ -1,0 +1,160 @@
+<div class="px-md-4 px-2 w-100">
+  <!-- START Header -->
+  <div class="d-md-flex justify-content-between align-items-center w-100 py-3">
+    <div class="col-3">
+      <span class="title-page"><span>Social</span>Network</span>
+    </div>
+    <div class="col-6 position-relative d-flex align-items-center">
+      <input type="text" placeholder="Find ..." class="w-100 input-search" />
+      <fa-icon [icon]="imgFind" class="icon-input"></fa-icon>
+    </div>
+    <div class="col-2 ps-3">
+      <button class="button-upload">
+        <fa-icon [icon]="imgUpload" class="pe-2"></fa-icon>Upload
+      </button>
+    </div>
+    <div class="col-2">
+      <div class="d-flex align-items-center w-100">
+        <div class="pe-1">
+          <div class="icon-profile">
+            <fa-icon [icon]="imgProfile"></fa-icon>
+          </div>
+        </div>
+        <div class="profile-name">
+          <div>Waseem</div>
+          <div>Arshad</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END Header -->
+
+  <!-- START Navigate -->
+  <div class="d-md-flex w-100 tab-navigate py-2">
+    <!-- Can change into a href route -->
+    <ng-container *ngFor="let menus of menu; let i = index">
+      <div>
+        <a href="#">{{ menus.name }}</a>
+        <ng-container *ngIf="i !== menu.length - 1">
+          <span class="px-3">/</span>
+        </ng-container>
+      </div>
+    </ng-container>
+  </div>
+  <!-- END Navigate -->
+
+  <section class="d-md-flex">
+    <!-- START Section Video -->
+    <div class="col-md-8 col-12 pe-3">
+      <div class="d-flex align-items-center w-100">
+        <div class="col sub-title">Videos</div>
+        <div class="col justify-content-center">
+          <button>Browse all videos</button>
+        </div>
+      </div>
+      <div class="w-100 pt-2">
+        <app-post-highlight
+          typeContent="video"
+          [data]="dataVideo"
+        ></app-post-highlight>
+      </div>
+    </div>
+    <!-- END Section Video -->
+
+    <!-- START Section Activity -->
+    <div class="col-md-4 col-12">
+      <div class="d-flex align-items-center w-100 justify-content-between">
+        <div class="col sub-title">Activity</div>
+        <div class="col">
+          <span><button>View timeline</button></span> /
+          <span><button>Filter activity</button></span>
+        </div>
+      </div>
+      <div class="w-100 py-2 border-list">
+        <app-post-activity [data]="dataActivity"></app-post-activity>
+      </div>
+    </div>
+    <!-- END Section Activity -->
+  </section>
+
+  <section class="d-md-flex">
+    <!-- START Section Left -->
+    <div class="col-md-8 col-12 pe-3">
+      <!-- START Content people -->
+      <div class="d-flex align-items-center w-100">
+        <div class="col sub-title">People</div>
+        <div class="col justify-content-center">
+          <button>View all</button>
+        </div>
+      </div>
+      <div class="w-100 pt-2">
+        <app-post-highlight
+          typeContent="people"
+          [data]="dataPeople"
+        ></app-post-highlight>
+      </div>
+      <!-- END Content people -->
+      <!-- START Content document -->
+      <div class="d-flex align-items-center w-100 pt-4">
+        <div class="col sub-title">Documents</div>
+        <div class="col justify-content-center">
+          <button>Browse all documents</button>
+        </div>
+      </div>
+      <div class="w-100 pt-2">
+        <app-post-highlight
+          typeContent="document"
+          [data]="dataDocument"
+        ></app-post-highlight>
+      </div>
+      <!-- END Content document -->
+    </div>
+    <!-- END Section Left -->
+
+    <!-- START Section Right -->
+    <div class="col-md-4 col-12">
+      <div class="d-flex align-items-center w-100 justify-content-between">
+        <div class="col sub-title">Channels</div>
+        <div class="col text-end"><button>Browse all channels</button></div>
+      </div>
+      <div class="w-100 py-3 border-list">
+        <app-post-channels [data]="dataChannel"></app-post-channels>
+      </div>
+    </div>
+    <!-- END Section Right -->
+  </section>
+
+  <div class="pt-5">
+    <div class="footer pt-3">
+      <div class="d-flex">
+        <ng-container *ngFor="let item of linkSocial">
+          <div class="pe-2">
+            <button class="button-social">
+              <fa-icon [icon]="item"></fa-icon>
+            </button>
+          </div>
+        </ng-container>
+      </div>
+      <div class="d-flex w-100 py-2">
+        <!-- Can change into a href route -->
+        <ng-container *ngFor="let menus of menuFooter; let i = index">
+          <a href="#">{{ menus.name }}</a>
+          <ng-container *ngIf="i !== menuFooter.length - 1">
+            <span class="px-3">/</span>
+          </ng-container>
+        </ng-container>
+      </div>
+
+      <div class="py-3">
+        <div>&copy;Copyright 2013 companyname.inc</div>
+        <div class="d-flex pt-1">
+          <a href="#">Privacy</a>
+          <span class="px-3">/</span>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <router-outlet></router-outlet> -->

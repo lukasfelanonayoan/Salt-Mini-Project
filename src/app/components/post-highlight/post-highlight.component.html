@@ -1,0 +1,124 @@
+<div class="list-highlight">
+  <ng-container *ngIf="typeContent === 'video'">
+    <ng-container *ngFor="let item of data; let i = index">
+      <div class="item" *ngIf="i === 0">
+        <div class="d-flex w-100 h-100 align-items-end">
+          <div class="w-100 px-2">
+            <div>
+              <div class="title">{{ item.title }}</div>
+            </div>
+            <div class="d-flex w-100 justify-content-between description">
+              <div>{{ item.username }}</div>
+              <div>{{ item.viewsCount }} views</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item" *ngIf="i > 0 && i < 5">
+        <div class="d-flex h-100 w-100 align-items-end">
+          <div class="w-100 px-2">
+            <div class="d-flex w-100 justify-content-between description">
+              <div>{{ item.username }}</div>
+              <div>{{ item.viewsCount }} views</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="item" *ngIf="i === 5">
+        <div
+          class="d-flex w-100 h-100 align-items-center justify-content-center"
+        >
+          <div class="icon me-2"><fa-icon [icon]="imgUpload"></fa-icon></div>
+          <div>
+            <div>Upload</div>
+            <div>Your Own Video</div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </ng-container>
+
+  <ng-container *ngIf="typeContent === 'people'">
+    <ng-container *ngFor="let item of data; let i = index">
+      <div class="item" *ngIf="i === 0">
+        <div class="d-flex w-100 h-100 align-items-end">
+          <div class="w-100 px-2">
+            <div>
+              <div class="title">{{ item.username }}</div>
+            </div>
+            <div class="d-flex w-100 justify-content-between description">
+              <div>{{ item.position }}</div>
+              <div>{{ item.viewsCount }} views</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item" *ngIf="i > 0 && i < 5">
+        <div class="d-flex h-100 w-100 align-items-end">
+          <div class="w-100 px-2">
+            <div class="d-flex w-100 justify-content-between description">
+              <div>{{ item.username }}</div>
+              <!-- <div>{{ item.viewsCount }} views</div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="item" *ngIf="i === 5">
+        <div
+          class="d-flex w-100 h-100 align-items-center justify-content-center"
+        >
+          <div class="icon me-2"><fa-icon [icon]="imgDotCircle"></fa-icon></div>
+          <div>
+            <div>Show</div>
+            <div>Your Work</div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </ng-container>
+
+  <ng-container *ngIf="typeContent === 'document'">
+    <ng-container *ngFor="let item of data; let i = index">
+      <div class="item" *ngIf="i === 0">
+        <div class="d-flex w-100 h-100 align-items-end">
+          <div class="w-100 px-2">
+            <div>
+              <div class="title">{{ item.title }}</div>
+            </div>
+            <div class="d-flex w-100 justify-content-between description">
+              <div>by {{ item.username }}</div>
+              <div>{{ item.viewsCount }} views</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item" *ngIf="i > 0 && i < 5">
+        <div class="d-flex h-100 w-100 align-items-end">
+          <div class="w-100 px-2">
+            <div>
+              <div class="title">{{ item.title }}</div>
+            </div>
+            <div class="d-flex w-100 justify-content-between description">
+              <!-- <div>{{ item.username }}</div> -->
+              <div>{{ item.viewsCount }} views</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="item" *ngIf="i === 5">
+        <div
+          class="d-flex w-100 h-100 align-items-center justify-content-center"
+        >
+          <div class="icon me-2"><fa-icon [icon]="imgPlus"></fa-icon></div>
+          <div>
+            <div>Share</div>
+            <div>Your Document</div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </ng-container>
+</div>

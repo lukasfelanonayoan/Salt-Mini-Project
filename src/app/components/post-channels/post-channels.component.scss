@@ -1,0 +1,23 @@
+.list-highlight {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+
+  height: 500px;
+
+  & .item {
+    background-color: rgb(253, 231, 231);
+    color: #953e46;
+    transition: 0.3s all;
+    
+    &:hover {
+      cursor: pointer;
+      background-color: lightblue;
+      color: red;
+    }
+  }
+
+  & .title {
+    font-weight: 500;
+  }
+}
