@@ -9,7 +9,7 @@
     background-color: rgb(253, 231, 231);
     color: #953e46;
     transition: 0.3s all;
-    
+
     &:hover {
       cursor: pointer;
       background-color: lightblue;
@@ -19,5 +19,6 @@
 
   & .title {
     font-weight: 500;
+    padding-bottom: 0.2rem;
   }
 }

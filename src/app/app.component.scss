@@ -1,48 +1,48 @@
 // CSS Header
-.input-search{
-  height: 44px;
+.input-search {
+  height: 34px;
   background-color: rgb(253, 231, 231);
   padding-right: 2.5rem;
   padding-left: 0.5rem;
 }
-.icon-input{
+.icon-input {
   position: absolute;
   color: #953e46;
   font-weight: 500;
   right: 1rem;
 }
-.button-upload{
+.button-upload {
   padding: 0.5rem 1rem;
   background-color: rgb(253, 231, 231);
   color: #953e46;
   font-weight: 500;
   border: none;
 }
-.icon-profile{
+.icon-profile {
   display: flex;
   justify-content: center;
   align-items: center;
   color: #953e46;
-  width: 44px;
-  height: 44px;
+  width: 34px;
+  height: 34px;
   background-color: rgb(253, 231, 231);
 }
-.profile-name{
-  font-size: 0.7rem;
+.profile-name {
+  font-size: 0.8rem;
 }
 .tab-navigate {
   border-top: 2px solid white;
   border-bottom: 2px solid white;
 }
-.title-page{
-    font-size: 2rem;
-    & span{
-        font-weight: 600;
-    }
+.title-page {
+  font-size: 2rem;
+  & span {
+    font-weight: 600;
+  }
 }
-.title-page:hover{
-    cursor: pointer;
-    text-decoration: underline;
+.title-page:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 // CSS Navigate
@@ -81,14 +81,14 @@ section {
 
 .footer {
   border-top: 2px solid white;
-  & .button-social{
+  & .button-social {
     font-size: 0.9rem;
     width: 30px;
     height: 30px;
     border: none;
     transition: 0.3s all;
   }
-  & .button-social:hover{
+  & .button-social:hover {
     color: blue;
   }
 }
